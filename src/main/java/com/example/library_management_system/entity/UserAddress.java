@@ -1,10 +1,15 @@
 package com.example.library_management_system.entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
@@ -29,6 +34,11 @@ public class UserAddress {
 
     @Column(name = "country")
     private String country;
+
+    @OneToOne(cascade = { CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH, CascadeType.DETACH })
+    @JoinColumn(name = "user_id")
+    @JsonBackReference
+    private User user;
 
     public Integer getId() {
         return id;
@@ -55,7 +65,7 @@ public class UserAddress {
     }
 
     public String getState() {
-        return city;
+        return state;
     }
 
     public void setState(String state) {
@@ -76,6 +86,14 @@ public class UserAddress {
 
     public void setCountry(String country) {
         this.country = country;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public UserAddress(Integer id, String street, String city, String postalCode, String country) {

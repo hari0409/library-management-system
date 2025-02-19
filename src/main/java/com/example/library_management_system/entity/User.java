@@ -5,10 +5,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.example.library_management_system.db_enum.MembershipType;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -43,6 +46,7 @@ public class User {
     private LocalDateTime membershipDate;
 
     @Column(name = "membership_type")
+    @Enumerated(EnumType.STRING)
     private MembershipType membershipType;
 
     @Column(name = "created_at")
@@ -51,8 +55,8 @@ public class User {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "user_id")
+    @OneToOne(cascade = CascadeType.ALL, mappedBy = "user")
+    @JsonManagedReference
     private UserAddress userAddress;
 
     @OneToMany(cascade = { CascadeType.MERGE, CascadeType.PERSIST, CascadeType.REFRESH, CascadeType.DETACH })
