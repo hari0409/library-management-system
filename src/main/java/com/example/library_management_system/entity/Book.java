@@ -35,6 +35,9 @@ public class Book {
     @Column(name = "publication_year")
     private Integer publicationYear;
 
+    @Column(name = "publisher")
+    private String publisher;
+
     @Column(name = "available_copies")
     private Integer availableCopies;
 
@@ -187,6 +190,14 @@ public class Book {
         this.reviews = reviews;
     }
 
+    public String getPublisher() {
+        return publisher;
+    }
+
+    public void setPublisher(String publisher) {
+        this.publisher = publisher;
+    }
+
     public Book() {
 
     }
@@ -217,7 +228,7 @@ public class Book {
     }
 
     @PreUpdate
-    public void udpateUpdatedAt() {
+    public void updateUpdatedAt() {
         this.setUpdatedAt(LocalDateTime.now());
     }
 

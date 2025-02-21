@@ -3,14 +3,14 @@
 1. **User Management**
     - Register new users => Completed
     - Update user information => Completed
-    - Delete users
-    - View user profiles => Completed
+    - Delete users => Wont be done.
+    - View user profiles by Email & ID => Completed
 
 2. **Book Management**
-    - Add new books
-    - Update book details
-    - Delete books
-    - Search for books
+    - Add new books => Completed
+    - Update book details => Completed
+    - Delete books => Wont be done.
+    - Search for books (Id, ISBN, Title) => Completed
 
 3. **Loan Management**
     - Issue books to users

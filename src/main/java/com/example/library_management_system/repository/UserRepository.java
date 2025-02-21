@@ -8,4 +8,5 @@ import com.example.library_management_system.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
 
+    public User findByEmail(String email);
 }

@@ -85,4 +85,8 @@ public class UserService {
         User user = userRepository.findById(id).get();
         return user.getUserAddress();
     }
+
+    public User findUserByEmail(String email) {
+        return userRepository.findByEmail(email);
+    }
 }

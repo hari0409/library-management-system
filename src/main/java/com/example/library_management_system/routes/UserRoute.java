@@ -6,6 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.library_management_system.entity.User;
@@ -37,6 +38,13 @@ public class UserRoute {
     public ResponseEntity<ResponseObject<?>> getUserById(@PathVariable Integer id) {
         return ResponseEntity.status(200)
                 .body(new ResponseObject<User>(GlobalConstant.SUCCESS, userService.findUserById(id)));
+    }
+
+    // Get User by Email
+    @GetMapping
+    public ResponseEntity<ResponseObject<?>> getUserByEmail(@RequestParam String email) {
+        return ResponseEntity.status(200)
+                .body(new ResponseObject<User>(GlobalConstant.SUCCESS, userService.findUserByEmail(email)));
     }
 
     // Create/Update Address
