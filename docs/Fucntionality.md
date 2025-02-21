@@ -1,42 +1,41 @@
 # List of Library Management Functionality
 
-1. **User Management**
-    - Register new users => Completed
-    - Update user information => Completed
-    - Delete users => Wont be done.
-    - View user profiles by Email & ID => Completed
+**User Management**        
+| Functionality              | Status |
+|----------------------------|--------|
+| Register new users         | ✅     |
+| Update user information    | ✅     |
+| View user profiles by Email & ID | ✅ |
 
-2. **Book Management**
-    - Add new books => Completed
-    - Update book details => Completed
-    - Delete books => Wont be done.
-    - Search for books (Id, ISBN, Title) => Completed
+**Book Management**               
+| Functionality              | Status |
+|----------------------------|--------|
+| Add new books              | ✅     |
+| Update book details        | ✅     |
+| Search for books (Id, ISBN, Title) | ✅ |
 
-3. **Loan Management**
-    - Issue books to users
-    - Return books
-    - Renew book loans
-    - Track overdue books
+**Loan Management**        
+| Functionality              | Status |
+|----------------------------|--------|
+| Issue books to users       |        |
+| Return books               |        |
+| Renew book loans           |        |
+| Track overdue books        |        |
 
-4. **Reservation Management**
-    - Reserve books
-    - Cancel reservations
-    - View reservation status
+**Inventory Management**  
+| Functionality              | Status |
+|----------------------------|--------|
+| Track book inventory       |        |
+| Generate inventory reports |        |
 
-5. **Inventory Management**
-    - Track book inventory
-    - Generate inventory reports
+**Notifications**   
+| Functionality              | Status |
+|----------------------------|--------|
+| Send due date reminders    |        |
 
-6. **Notifications**
-    - Send due date reminders
-    - Notify users of reserved book availability
-
-7. **Reporting**
-    - Generate user activity reports
-    - Generate loan and return reports
-    - Generate overdue book reports
-
-8. **System Administration**
-    - Manage system settings
-    - Backup and restore data
-    - Monitor system performance
+**Reporting**
+| Functionality                    | Status |
+|----------------------------------|--------|
+| Generate user activity reports   |        |
+| Generate loan and return reports |        |
+| Generate overdue book reports    |        |
